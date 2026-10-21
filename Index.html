@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:Arial,sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffd6e7,#fff5f8);
+    overflow:hidden;
+}
+
+.card{
+    background:white;
+    width:90%;
+    max-width:420px;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    color:#e84a8a;
+    margin-bottom:15px;
+}
+
+p{
+    color:#555;
+    line-height:1.8;
+}
+
+button{
+    margin-top:20px;
+    border:none;
+    background:#ff5c9a;
+    color:white;
+    padding:14px 30px;
+    border-radius:50px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#letter{
+    display:none;
+    margin-top:20px;
+    text-align:left;
+    background:#fff0f5;
+    border-radius:15px;
+    padding:20px;
+    animation:fade .6s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.heart{
+    position:absolute;
+    color:pink;
+    animation:float 8s linear infinite;
+    opacity:.7;
+}
+
+@keyframes float{
+from{
+    transform:translateY(100vh);
+}
+to{
+    transform:translateY(-120vh);
+}
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<h1>ကိုကို့ အတွက် ဘေဘီ့ရယ့် လက်ဆောင် ❤️</h1>
+
+<p>ကိုကိုအလုပ်ပြီးရင် ဒီခလုတ်လေးကိုနှိပ်နော် 🥺</p>
+
+<button onclick="openLetter()">နှိပ်ပါရှင့် ❤️</button>
+
+<div id="letter">
+
+<p>
+ကိုကိုရေ 💗
+
+ဒီနေ့အလုပ်ကနေ ပြန်လာတာပင်ပန်းနေပီလားဟင်
+
+ခဏလောက်တော့ အနားယူပါဦးနော်
+ကိုယ့်ကိုယ်ကို ဂရုစိုက်နော် နေမကောင်းမဖြစ်စေနဲ့
+စိတ်ပူတာမို့ ဂရုစိုက်နော် ကိုကို💗
+
+ကိုကို ပြုံးမိရင်
+ဘေဘီလည်း ပျော်တယ်သိလား
+
+  ❤️အများကြီးချစ်တယ်နော် ❤️အာဘွား❤️
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+document.getElementById("letter").style.display="block";
+
+}
+
+for(let i=0;i<25;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💗";
+
+heart.style.left=Math.random()*100+"%";
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
